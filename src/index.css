@@ -1,42 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Premium Real Estate Design System */
 
 @layer base {
   :root {
+    /* Core Colors - Sophisticated Real Estate Palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 214 24% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 214 24% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 214 24% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Deep Professional Navy */
+    --primary: 214 100% 10%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 214 100% 15%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Warm Premium Gold */
+    --secondary: 35 100% 50%;
+    --secondary-foreground: 214 100% 10%;
+    --secondary-hover: 35 100% 45%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Luxury Accent Colors */
+    --accent: 210 15% 96%;
+    --accent-foreground: 214 24% 15%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 15% 96%;
+    --muted-foreground: 214 16% 46%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 214 15% 88%;
+    --input: 214 15% 94%;
+    --ring: 35 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Premium Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(214 100% 10%) 0%, hsl(214 100% 15%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(35 100% 50%) 0%, hsl(35 100% 60%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(214 100% 8%) 0%, hsl(214 80% 12%) 50%, hsl(214 60% 20%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 15% 98%) 100%);
+    
+    /* Premium Shadows */
+    --shadow-luxury: 0 25px 50px -12px hsl(214 100% 10% / 0.25);
+    --shadow-card: 0 10px 25px -5px hsl(214 50% 20% / 0.1);
+    --shadow-button: 0 8px 25px -8px hsl(35 100% 50% / 0.3);
+    --shadow-elegant: 0 20px 40px -12px hsl(214 80% 15% / 0.15);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +122,54 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  /* Premium Button Variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-secondary to-secondary-hover text-secondary-foreground px-8 py-4 rounded-xl font-semibold text-lg shadow-button hover:shadow-lg transition-all duration-300 hover:scale-105;
+  }
+  
+  .btn-primary {
+    background: var(--gradient-primary);
+    @apply text-primary-foreground px-6 py-3 rounded-lg font-semibold shadow-elegant hover:shadow-luxury transition-all duration-300 hover:scale-105;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary bg-transparent px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300;
+  }
+
+  /* Luxury Card Styles */
+  .card-luxury {
+    background: var(--gradient-card);
+    @apply rounded-2xl p-8 shadow-card hover:shadow-luxury transition-all duration-500 border border-border;
+  }
+  
+  .card-property {
+    @apply bg-card rounded-xl overflow-hidden shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 border border-border;
+  }
+
+  /* Hero Gradient Backgrounds */
+  .bg-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .bg-luxury {
+    background: var(--gradient-primary);
+  }
+
+  /* Form Styling */
+  .input-luxury {
+    @apply w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/20 transition-all duration-200;
+  }
+  
+  .select-luxury {
+    @apply w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/20 transition-all duration-200 cursor-pointer;
   }
 }
