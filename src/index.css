@@ -133,12 +133,14 @@
 @layer components {
   /* Premium Button Variants */
   .btn-hero {
-    @apply bg-gradient-to-r from-secondary to-secondary-hover text-secondary-foreground px-8 py-4 rounded-xl font-semibold text-lg shadow-button hover:shadow-lg transition-all duration-300 hover:scale-105;
+    @apply bg-gradient-to-r from-secondary to-secondary-hover text-secondary-foreground px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+    box-shadow: var(--shadow-button);
   }
   
   .btn-primary {
     background: var(--gradient-primary);
-    @apply text-primary-foreground px-6 py-3 rounded-lg font-semibold shadow-elegant hover:shadow-luxury transition-all duration-300 hover:scale-105;
+    @apply text-primary-foreground px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+    box-shadow: var(--shadow-elegant);
   }
   
   .btn-outline {
@@ -148,11 +150,13 @@
   /* Luxury Card Styles */
   .card-luxury {
     background: var(--gradient-card);
-    @apply rounded-2xl p-8 shadow-card hover:shadow-luxury transition-all duration-500 border border-border;
+    @apply rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-border;
+    box-shadow: var(--shadow-card);
   }
   
   .card-property {
-    @apply bg-card rounded-xl overflow-hidden shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 border border-border;
+    @apply bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-border;
+    box-shadow: var(--shadow-card);
   }
 
   /* Hero Gradient Backgrounds */
