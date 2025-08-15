@@ -20,26 +20,26 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      content: "+1 (555) 123-4567",
-      action: "tel:+15551234567"
-    },
-    {
-      icon: Mail,
-      title: "Email Us",
-      content: "info@luxuryrealty.com",
-      action: "mailto:info@luxuryrealty.com"
+      content: "(206) 919-6886",
+      action: "tel:2069196886"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      content: "123 Luxury Ave, Premium District",
+      content: "3190 HW-160, Suite F, Pahrump, Nevada 89048",
       action: "https://maps.google.com"
+    },
+    {
+      icon: Clock,
+      title: "Office Hours",
+      content: "Open daily 8:00 am - 7:00 pm",
+      action: ""
     },
     {
       icon: MessageCircle,
       title: "WhatsApp",
       content: "Message us instantly",
-      action: "https://wa.me/15551234567"
+      action: "https://wa.me/14259412560"
     }
   ];
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Search, MapPin, Home, DollarSign, Bed, Bath } from "lucide-react";
+import Badges from "./Badges";
 
 const SearchForm = () => {
   const [searchData, setSearchData] = useState({
@@ -13,7 +14,6 @@ const SearchForm = () => {
 
   const handleSearch = () => {
     console.log("Search initiated with:", searchData);
-    // Search functionality would be implemented here
   };
 
   return (
@@ -139,6 +139,11 @@ const SearchForm = () => {
             </div>
           </div>
         </div>
+      </div>
+      
+      {/* Professional Badges */}
+      <div className="mt-16">
+        <Badges />
       </div>
     </section>
   );

@@ -3,21 +3,21 @@ import { ArrowRight, Home, Search, HandHeart, Calculator, Shield, Star } from "l
 const Services = () => {
   const services = [
     {
-      icon: Search,
-      title: "Property Search",
-      description: "Find your perfect home with our extensive database of luxury properties and personalized search assistance.",
-      features: ["Custom search criteria", "Market insights", "Virtual tours"]
+      icon: Home,
+      title: "Real Estate Done Right",
+      description: "Whether you're getting ready to buy or sell your residence, looking at investment properties, or just curious about the markets, our team ensures you get the best experience possible!",
+      features: ["Expert guidance", "Market analysis", "Professional service"]
     },
     {
-      icon: Home,
-      title: "Get It Sold!",
-      description: "Maximize your property value with our proven marketing strategies and expert negotiation skills.",
-      features: ["Professional photography", "Strategic pricing", "Global exposure"]
+      icon: Search,
+      title: "Commercial & Residential",
+      description: "Large or small, condo or mansion, we can find it and get at the price that's right. We live, work, and play in this community.",
+      features: ["All property types", "Investment properties", "Local expertise"]
     },
     {
       icon: HandHeart,
-      title: "Buyer's Guide",
-      description: "Navigate the buying process with confidence. We guide you from search to closing with expert support.",
+      title: "Rely on Expertise",
+      description: "Questions about affordability, credit, and loan options? We'll connect you with the right people to get the answers you need in a timely fashion.",
       features: ["Market analysis", "Negotiation support", "Legal guidance"]
     },
     {

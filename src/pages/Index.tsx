@@ -3,6 +3,7 @@ import Statistics from "@/components/Statistics";
 import Services from "@/components/Services";
 import SearchForm from "@/components/SearchForm";
 import PropertyGallery from "@/components/PropertyGallery";
+import PhotoGallery from "@/components/PhotoGallery";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -14,6 +15,7 @@ const Index = () => {
       <Services />
       <SearchForm />
       <PropertyGallery />
+      <PhotoGallery />
       <Contact />
       <Footer />
     </div>
