@@ -4,8 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Premium Real Estate Design System */
-
 @layer base {
   :root {
     /* Core Colors - Sophisticated Real Estate Palette */
